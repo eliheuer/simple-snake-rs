@@ -3,7 +3,7 @@ pub enum Direction {
     Up,
     Right,
     Down,
-    Left
+    Left,
 }
 
 impl Direction {
