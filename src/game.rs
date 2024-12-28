@@ -178,12 +178,13 @@ impl Game {
         self.draw_background();
         self.draw_food();
         self.draw_snake();
+        self.draw_score();
     }
 
     fn prepare_ui(&mut self) {
         enable_raw_mode().unwrap();
         self.stdout
-            .execute(SetSize(self.width + 3, self.height + 3)).unwrap()
+            .execute(SetSize(self.width + 3, self.height + 4)).unwrap()
             .execute(Clear(ClearType::All)).unwrap()
             .execute(Hide).unwrap();
     }
@@ -264,5 +265,12 @@ impl Game {
             .execute(Print("#")).unwrap()
             .execute(MoveTo(0, self.height + 1)).unwrap()
             .execute(Print("#")).unwrap();
+    }
+
+    fn draw_score(&mut self) {
+        self.stdout.execute(SetForegroundColor(Color::White)).unwrap();
+        self.stdout
+            .execute(MoveTo(1, self.height + 2)).unwrap()
+            .execute(Print(format!("Score: {}", self.score))).unwrap();
     }
 }
