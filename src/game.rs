@@ -221,7 +221,7 @@ impl Game {
         for food in self.food.iter() {
             self.stdout
                 .execute(MoveTo(food.x + 1, food.y + 1)).unwrap()
-                .execute(Print("•")).unwrap();
+                .execute(Print("🍎")).unwrap();
         }
     }
 
