@@ -188,8 +188,8 @@ impl Game {
     fn render(&mut self) {
         self.draw_borders();
         self.draw_background();
-        self.draw_food();
         self.draw_snake();
+        self.draw_food();
         self.draw_score();
     }
 
@@ -227,11 +227,11 @@ impl Game {
         self.stdout.execute(fg).unwrap();
 
         let body_points = self.snake.get_body_points();
-        for body in body_points.iter() {
+        for (i, body) in body_points.iter().enumerate() {
             self.stdout
                 .execute(MoveTo(body.x + 1, body.y + 1))
                 .unwrap()
-                .execute(Print("#"))
+                .execute(Print(if i == 0 { "S" } else { "s" }))
                 .unwrap();
         }
     }
@@ -245,7 +245,7 @@ impl Game {
             self.stdout
                 .execute(MoveTo(food.x + 1, food.y + 1))
                 .unwrap()
-                .execute(Print("🍎"))
+                .execute(Print("A"))
                 .unwrap();
         }
     }
