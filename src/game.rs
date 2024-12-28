@@ -11,9 +11,9 @@ use crossterm::event::{poll, read, Event, KeyCode, KeyModifiers, KeyEvent};
 use crate::command::Command;
 use rand::Rng;
 
-const MAX_INTERVAL: u16 = 250;
-const MIN_INTERVAL: u16 = 50;
-const MAX_SPEED: u16 = 30;
+const MAX_INTERVAL: u16 = 64;
+const MIN_INTERVAL: u16 = 16;
+const MAX_SPEED: u16 = 8;
 
 #[derive(Debug)]
 pub struct Game {
