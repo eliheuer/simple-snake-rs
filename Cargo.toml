@@ -1,7 +1,7 @@
 [package]
 name = "snake-rs"
 version = "0.1.0"
-authors = ["Jonathon Henderson <jrhenderson1988@hotmail.com>"]
+authors = ["Eli H <elih@protonmail.com>, Jonathon Henderson <jrhenderson1988@hotmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

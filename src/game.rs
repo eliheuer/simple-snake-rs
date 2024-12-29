@@ -11,8 +11,8 @@ use rand::Rng;
 use std::io::Stdout;
 use std::time::{Duration, Instant};
 
-const MAX_INTERVAL: u16 = 64;
-const MIN_INTERVAL: u16 = 16;
+const MAX_INTERVAL: u16 = 128;
+const MIN_INTERVAL: u16 = 32;
 const MAX_SPEED: u16 = 8;
 
 #[derive(Debug)]
@@ -317,7 +317,7 @@ impl Game {
             .execute(SetForegroundColor(Color::White))
             .unwrap();
         self.stdout
-            .execute(MoveTo(1, self.height + 2))
+            .execute(MoveTo(0, self.height + 2))
             .unwrap()
             .execute(Print(format!("Score: {}", self.score)))
             .unwrap();
