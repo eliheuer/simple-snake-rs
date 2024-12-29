@@ -1,7 +1,7 @@
 # Simple Snake RS
 A simple snake game in Rust. This game started as the result of following [this](https://blog.scottlogic.com/2020/10/08/lets-build-snake-with-rust.html) blog post, but has been heavily modified.
 
-![Snake Game Screenshot](documentation/screenshot.png)
+![Snake Game Screenshot](documentation/screenshots/snake-mac-001.png)
 
 ## Running the Game
 
