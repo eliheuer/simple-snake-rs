@@ -5,7 +5,9 @@ pub enum Direction {
     Down,
     Left,
 }
-
+// Note: Without this opposite functionality,
+// the body segments would be placed in front of the head,
+// which would immediately cause a collision when the snake starts moving.
 impl Direction {
     pub fn opposite(&self) -> Self {
         match self {

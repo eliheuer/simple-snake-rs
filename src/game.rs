@@ -38,7 +38,7 @@ impl Game {
             food: None,
             snake: Snake::new(
                 Point::new(width / 2, height / 2),
-                3,
+                2,
                 match rand::thread_rng().gen_range(0, 4) {
                     0 => Direction::Up,
                     1 => Direction::Right,
